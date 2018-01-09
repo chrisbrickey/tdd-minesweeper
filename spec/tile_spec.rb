@@ -3,17 +3,14 @@ require 'tile'
 
 describe Tile do
 
-  before (:all) do
-    subject = Tile.new(1, 5, false)
-  end
-
   describe "Tile attributes" do
 
     it "has attributes x, y, mine, revealed that are readable" do
-      expect(tile.x).to eq(1)
-      expect(tile.x).to eq(5)
-      expect(tile.x).to eq(false)
-      expect(tile.x).to eq(false)
+      subject = Tile.new(1, 5, false)
+      expect(subject.x).to eq(1)
+      expect(subject.y).to eq(5)
+      expect(subject.mine).to eq(false)
+      expect(subject.revealed).to eq(false)
     end
 
 
