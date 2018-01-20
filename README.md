@@ -10,7 +10,7 @@ xxx
 2. Install the gem locally
   - `gem install ./minesweeper_chrisbrickey-0.0.1.gem`
 3. Use gem locally inside irb
-  - `require 'minesweeper_chrisbrickey'`
+  - `require 'game'`
 4. Run tests
   - `rspec spec/`
 5. Push gem
@@ -33,7 +33,3 @@ xxx
 ## Future Development
 - x
 - x
-
-
-curl -u chrisbrickey https://rubygems.org/api/v1/api_key.yaml >
-~/.gem/credentials; chmod 0600 ~/.gem/credentials

@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Minesweeper"
   s.authors     = ["Chris Brickey"]
   s.email       = 'cbrickey1@gmail.com'
-  s.files       = ["lib/minesweeper.rb"]
+  s.files       = ["lib/game.rb"]
   s.homepage    =
     'http://rubygems.org/gems/minesweeper_chrisbrickey'
   s.license       = 'MIT'
