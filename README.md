@@ -31,3 +31,6 @@ xxx
 ## Future Development
 - x
 - x
+
+## Notes to self
+- Add every new file to the s.files portion of gemspec
