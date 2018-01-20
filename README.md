@@ -21,8 +21,6 @@ xxx
   - `gem list -r minesweeper_chrisbrickey`
 2. Install gem
   - `gem install minesweeper_chrisbrickey`
-3. Run tests
-  - `rspec spec/`
 
 
 ## Major Dependencies
