@@ -11,3 +11,7 @@ class Game
     board.display
   end
 end
+
+if __FILE__ == $0
+  Game.hi
+end
