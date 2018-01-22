@@ -2,10 +2,11 @@ require 'tile'
 
 class Board
 
-  attr_reader :grid
+  attr_reader :grid, :mines
 
   def initialize(n=2)
     @grid = make_grid(n)
+    @mines = (n * n) / 4
   end
 
   def display
@@ -32,7 +33,7 @@ class Board
 
   def make_grid(n)
     final_arr = []
-    
+
     n.times do |y_idx|
       subarray = []
       n.times do |x_idx|

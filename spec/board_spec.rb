@@ -27,6 +27,14 @@ describe Board do
 
   end
 
+  describe "Board#mines" do # may be testing implementation instead of behaviour
+
+    it "reveals mines of which there should be about 1 mine for every 4 tiles" do
+      expect(subject2.mines).to eq(1)
+      expect(subject3.mines).to eq(2)
+    end
+  end
+
   describe "Board#display" do
 
     it "shows a 2x2 grid" do
