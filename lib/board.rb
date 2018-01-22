@@ -1,8 +1,13 @@
 class Board
 
-  def display
+  def display(n=2)
     result = ""
-    2.times { result += "X X\n"}
+    n.times do
+      substring = ""
+      n.times { substring += "X "}
+      substring += "\n"
+      result += substring
+    end
     result
   end
 
