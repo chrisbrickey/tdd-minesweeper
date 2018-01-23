@@ -29,9 +29,20 @@ describe Board do
 
   describe "Board#mines" do
 
-    it "reveals mines of which there should be about 1 mine for every 4 tiles" do
-      expect(subject2.mines).to eq(1)
-      expect(subject3.mines).to eq(2)
+    it "reveals mine map of which there should be about 1 mine for every 4 tiles" do
+
+      mines_in_subject2 = 0
+      subject2.mines.each do |y_value, subarray|
+        mines_in_subject2 += subarray.length
+      end
+
+      mines_in_subject3 = 0
+      subject3.mines.each do |y_value, subarray|
+        mines_in_subject3 += subarray.length
+      end
+
+      expect(mines_in_subject2).to eq(1)
+      expect(mines_in_subject3).to eq(2)
     end
 
   end
