@@ -72,8 +72,7 @@ describe Board do
           actual_count_of_mines += 1 if tile.mine == true
         end
       end
-      expect(actual_count_of_mines).to eq(subject3.mines)
-      expect(actual_count_of_mines).to eq(3)
+      expect(actual_count_of_mines).to eq(2)
     end
 
   end
