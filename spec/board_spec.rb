@@ -33,6 +33,18 @@ describe Board do
       expect(subject2.mines).to eq(1)
       expect(subject3.mines).to eq(2)
     end
+
+    it "randomly places mines in grid" do
+      actual_count_of_mines = 0
+      subject3.grid.each do |subarray|
+        subarray.each do |tile|
+          actual_count_of_mines += 1 if tile.mine == true
+        end
+      end
+      expect(actual_count_of_mines).to eq(subject3.mines)
+      expect(actual_count_of_mines).to eq(3)
+    end
+
   end
 
   describe "Board#display" do
