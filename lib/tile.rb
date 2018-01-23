@@ -1,6 +1,7 @@
 class Tile
 
-  attr_reader :x, :y, :mine, :revealed
+  attr_reader :x, :y
+  attr_accessor :mine, :revealed
 
   def initialize(x, y, mine=false)
     @x = x
