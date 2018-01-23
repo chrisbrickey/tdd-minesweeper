@@ -27,11 +27,31 @@ describe Board do
 
   end
 
-  describe "Board#mines" do # may be testing implementation instead of behaviour
+  describe "Board#mines" do
 
     it "reveals mines of which there should be about 1 mine for every 4 tiles" do
       expect(subject2.mines).to eq(1)
       expect(subject3.mines).to eq(2)
+    end
+
+  end
+
+  describe "Board#generate_mines" do # may be testing implementation instead of behaviour
+
+    it "generates all mines within bounds of the grid" do
+      hash_of_mines = subject3.mines
+      # y_values_in_range = hash_of_mines.keys.all? {|y| y.between?(0, 2)}
+      y_values_in_range = true
+      x_values_in_range = true
+      hash_of_mines.each do |y_value, subarray|
+        subarray.each do |x_value|
+          y_values_in_range = false if !y_value.between?(0, 2)
+          x_values_in_range = false if !x_value.between?(0, 2)
+        end
+      end
+
+      expect(y_values_in_range).to be true
+      expect(x_values_in_range).to be true
     end
 
     it "randomly places mines in grid" do
@@ -62,4 +82,5 @@ describe Board do
     end
 
   end
-end
+
+end # of Board
