@@ -29,6 +29,7 @@ class Board
     end
 
     puts main_string
+    main_string
   end
 
   private
@@ -65,7 +66,8 @@ class Board
 
     @mines.each do |y_value, subarray|
       subarray.each do |x_value|
-        final_arr[y_value][x_value].mine = true
+        tile = final_arr[y_value][x_value]
+        tile.mine = true
       end
     end
 
