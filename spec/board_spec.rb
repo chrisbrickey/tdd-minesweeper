@@ -79,16 +79,26 @@ describe Board do
 
   describe "Board#display" do
 
+    # it "shows a 2x2 grid" do
+    #   expected_two_by_two = "X X \nX X \n"
+    #   actual_two_by_two = subject2.display
+    #   expect(actual_two_by_two).to eq(expected_two_by_two)
+    # end
+    #
+    # it "shows a 2D square grid of variable side lengths" do
+    #   expected_three_by_three = "X X X \nX X X \nX X X \n"
+    #   actual_three_by_three = subject3.display
+    #   expect(actual_three_by_three).to eq(expected_three_by_three)
+    # end
+
     it "shows a 2x2 grid" do
-      expected_two_by_two = "X X \nX X \n"
-      actual_two_by_two = subject2.display
-      expect(actual_two_by_two).to eq(expected_two_by_two)
+      STDOUT.should_receive(:puts).with("X X \nX X \n")
+      subject2.display
     end
 
     it "shows a 2D square grid of variable side lengths" do
-      expected_three_by_three = "X X X \nX X X \nX X X \n"
-      actual_three_by_three = subject3.display
-      expect(actual_three_by_three).to eq(expected_three_by_three)
+      STDOUT.should_receive(:puts).with("X X X \nX X X \nX X X \n")
+      subject3.display
     end
 
   end

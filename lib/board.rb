@@ -28,7 +28,7 @@ class Board
       main_string += substring
     end
 
-    main_string
+    puts main_string
   end
 
   private
@@ -65,7 +65,6 @@ class Board
 
     @mines.each do |y_value, subarray|
       subarray.each do |x_value|
-        # p final_arr[y_value][x_value]
         final_arr[y_value][x_value].mine = true
       end
     end
