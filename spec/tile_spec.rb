@@ -13,6 +13,18 @@ describe Tile do
       expect(subject.revealed).to eq(false)
     end
 
+    it "allows setting for mine attribute" do
+      subject = Tile.new(1, 5, false)
+      subject.mine = true
+      expect(subject.mine).to eq(true)
+    end
+
+    it "allows setting for revealed attribute" do
+      subject = Tile.new(1, 5, false)
+      subject.revealed = true
+      expect(subject.revealed).to eq(true)
+    end
+
 
   end
 end
